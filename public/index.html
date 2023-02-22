@@ -54,6 +54,28 @@
 					class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight transition-all duration-300 md:block"
 					>Get Started</a
 				>
+
+				<!-- Hamburger Icon -->
+				<button
+					id="menu-btn"
+					class="block hamburger md:hidden focus:outline-none">
+					<span class="hamburger-t"></span>
+					<span class="hamburger-m"></span>
+					<span class="hamburger-b"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="md:hidden">
+				<div
+					id="menu"
+					class="hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+					<a href="#">Pricing</a>
+					<a href="#">Product</a>
+					<a href="#">About Us</a>
+					<a href="#">Careers</a>
+					<a href="#">Community</a>
+				</div>
 			</div>
 		</nav>
 
@@ -307,13 +329,23 @@
 				<!-- Logo and Social Container -->
 				<div
 					class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
-					<div class="pb-8">
+					<!-- Dynamic Copyright -->
+					<div
+						class="mx-auto my-6 text-center text-sm text-white md:hidden">
+						Copyright &copy;
+						<script>
+							document.write(' ' + new Date().getFullYear());
+						</script>
+						All Rights Reserved
+					</div>
+					<!-- Logo -->
+					<div>
 						<img
 							src="./images/resources/logo.svg"
 							alt="logo"
 							class="h-8" />
 					</div>
-					<!-- Social Links COntainer -->
+					<!-- Social Links Container -->
 					<div class="flex justify-center space-x-4">
 						<!-- Link 1 -->
 						<a href="#">
@@ -387,8 +419,18 @@
 							</button>
 						</div>
 					</form>
+					<!-- Dynamic Copyright -->
+					<div class="hidden text-sm text-center text-white md:block">
+						Copyright &copy;
+						<script>
+							document.write(' ' + new Date().getFullYear());
+						</script>
+						All Rights Reserved
+					</div>
 				</div>
 			</div>
 		</footer>
+
+		<script src="./index.js"></script>
 	</body>
 </html>
